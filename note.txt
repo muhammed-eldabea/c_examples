@@ -1,0 +1,47 @@
+when  calling a function we have a function argument 
+when we declear it we have a function parameters 
+function parameters cant be recleared inside the function body >>error 
+    Ram memory segement : 
+        1-stack  : 
+            local variable and return address 
+        2-Heap : 
+            Dynamic data storage 
+        3- .Data : 
+            static and non Zero global data 
+        4- .bss 
+            zero global variable non initializer global and static  
+any function called in programe has it own (activation record ) stack frame 
+
+Storage class : 
+    define the duration of variable in memory 
+    the segement at which variable will stored 
+    linkage data between files 
+
+    1- auto storage class : 
+        all local variable by defualt are auto  
+        life time start and end with function life 
+        stored in stack with garbage value in case of uninizialized 
+    2- register storage class : 
+        tell compiler to store data in cpu register with more speed 
+         it life time as programe run 
+         cant use the unary operator with register >> compilaation error as  we dont know in which register data stored 
+    3- static : 
+        put data in data segement 
+        life time is as programe run 
+        initialized to zero automaticaly 
+        static with global >> restrict access of varible within file at which it declear 
+        static with function >> restrict access of function within file  
+    4-extern 
+        give access to a global variable in a file to make it seen in another one 
+Guard file >> prevent double inclusion 
+/******************
+#ifndef Moudule_name 
+#define Moudule_name 
+
+//defination 
+
+#endif 
+***********************/ 
+
+int array[10] = {[0]=5,[5]=3} ; 
+int arr[3] = {1,2,3} ; arr[3] = 20 ; >> warning as you access 
